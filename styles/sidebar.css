@@ -1,6 +1,6 @@
 nav {
     position: fixed;
-    top: 50px;
+    top: 60px;
     left: 0;
     bottom: 0;
     background-color: white;
@@ -51,11 +51,12 @@ nav div {
     margin-left: 10px;
     padding-left: 10px;
     padding-right: 15px;
+    border-radius: 10px;
     position: relative;
     align-items: center;
 }
 nav div:hover {
-    background-color: aqua;
+    background-color: rgb(242, 242, 242);
 }
 .subscribed-channel-images {
     border-radius: 100%;
