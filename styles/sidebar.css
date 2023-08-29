@@ -1,0 +1,79 @@
+nav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    white-space: nowrap;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    width: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 1;
+}
+nav .tooltip {
+    position: absolute;
+    top: -20px;
+    left: 280px;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    font-size: 12px;
+    padding: 5px 5px;
+    border-radius: 1px;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s all ease;
+    transition-delay: .55s;
+    z-index: 30;
+}
+
+nav a,a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: black;
+}
+nav img {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+    margin-right: 0;
+}
+nav div {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    position: relative;
+    align-items: center;
+}
+nav div:hover {
+    background-color: aqua;
+}
+.subscribed-channel-images {
+    border-radius: 100%;
+    height: 22px;
+    width: 22px;
+    object-fit: cover;
+    margin-left: 0px;
+}
+
+.header-text {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 17px;
+    width: 180px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+.head-text {
+    margin-left: 30px;
+    text-decoration: none;
+}
