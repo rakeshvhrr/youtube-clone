@@ -1,6 +1,5 @@
 main {
     margin-left: 18px;
-   
 }
 .video-grid {
     margin-left: 250px;
@@ -16,7 +15,7 @@ main {
         grid-template-columns: 1fr;
     }
     .youtube-video-block, .youtube-video-block-playlist {
-        min-width: 500px;
+        min-width: 450px;
     }
 }
 @media only screen and (min-width: 801px) and (max-width: 900px){
@@ -80,6 +79,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin-right: 5px;
 }
 .thumbnail {
     position: relative;
@@ -108,12 +108,14 @@ main {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 .video-title {
     margin-top: 0px;
     font-size: 16px;
     margin-bottom: 0px;
     font-weight: 500;
+    
 }
 .channel-name-and-stats{
     display: flex;
@@ -142,7 +144,26 @@ main {
     padding-right: 5px;
     font-size: 25px;
 }
-
+.ellipsis {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    opacity: 0;
+    transition: background-color 0.15s;
+}
+.ellipsis:active {
+    background-color: rgb(204, 204, 204);
+}
+.youtube-video-block:hover .ellipsis {
+    opacity: 1;
+    cursor: pointer;
+}
 .youtube-video-block-playlist {
     width: 400px;
     display: flex;
