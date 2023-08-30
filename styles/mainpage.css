@@ -145,6 +145,7 @@ main {
     font-size: 25px;
 }
 .ellipsis {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -157,8 +158,52 @@ main {
     opacity: 0;
     transition: background-color 0.15s;
 }
+.ellipsis-options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: -260px;
+    right: 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: none;
+    transition: display 0.5s;
+}
+.ellipsis-options a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+    height: 35px;
+    width: 210px;
+}
+.ellipsis-options a:hover {
+    background-color: gray;
+}
+.ellipsis-options img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.ellipsis-options-div-one {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.ellipsis-options-div-two {
+    display: flex;
+    flex-direction: column;
+}
+.ellipsis:active .ellipsis-options{
+    display: block;
+}
 .ellipsis:active {
-    background-color: rgb(204, 204, 204);
+    background-color: gray;
 }
 .youtube-video-block:hover .ellipsis {
     opacity: 1;
