@@ -1,6 +1,5 @@
 body {
     font-family: Roboto, Arial ;
-    height: 3000px;
     z-index: 10;
     overflow: scroll;
     overflow-x: hidden;

@@ -10,70 +10,96 @@ main {
     position: relative;
     width: 400px;
 }
+
 @media only screen and (max-width: 800px) {
     .video-grid {
         grid-template-columns: 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         min-width: 450px;
+    }
+    .playlist-overlay {
+        min-height: 252px;
     }
 }
 @media only screen and (min-width: 801px) and (max-width: 900px){
     .video-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 250px;
+    }
+    .playlist-overlay {
+        max-height: 140px;
     }
 }
 @media only screen and (min-width: 901px) and (max-width: 1000px){
     .video-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 320px;
+    }
+    .playlist-overlay {
+        max-height: 180px;
     }
 }
 @media only screen and (min-width: 1001px) and (max-width: 1100px){
     .video-grid {
         grid-template-columns: 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 340px;
+    }
+    .playlist-overlay {
+        max-height: 192px;
     }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1200px){
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 300px;
+    }
+    .playlist-overlay {
+        max-height: 170px;
     }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1300px){
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 330px;
+    }
+    .playlist-overlay {
+        max-height: 186px;
     }
 }
 @media only screen and (min-width: 1301px) and (max-width: 1400px){
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 360px;
+    }
+    .playlist-overlay {
+        max-height: 203px;
     }
 }
 @media only screen and (min-width: 1401px) and (max-width: 1500px){
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .youtube-video-block, .youtube-video-block-playlist {
+    .youtube-video-block, .youtube-video-block-playlist, .youtube-playlist {
         max-width: 400px;
     }
+    .playlist-overlay {
+        max-height: 225px;
+    }
 }
+
 .youtube-video-block {
     width: 400px;
     display: flex;
@@ -115,12 +141,11 @@ main {
     font-size: 16px;
     margin-bottom: 0px;
     font-weight: 500;
-    
+    position: relative;
 }
 .channel-name-and-stats{
     display: flex;
     flex-direction: column;
-    
 }
 .channel-name {
     color: rgb(96, 96, 96);
@@ -158,47 +183,6 @@ main {
     opacity: 0;
     transition: background-color 0.15s;
 }
-.ellipsis-options {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    top: -260px;
-    right: 20px;
-    font-size: 14px;
-    border-radius: 6px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: none;
-    transition: display 0.5s;
-}
-.ellipsis-options a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 8px;
-    height: 35px;
-    width: 210px;
-}
-.ellipsis-options a:hover {
-    background-color: gray;
-}
-.ellipsis-options img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-.ellipsis-options-div-one {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid gray;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
-.ellipsis-options-div-two {
-    display: flex;
-    flex-direction: column;
-}
 .ellipsis:active .ellipsis-options{
     display: block;
 }
@@ -221,7 +205,7 @@ main {
     width: 13px;
 }
 .playlist-overlay {
-    font-size: 16px;
+    font-size: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -235,26 +219,21 @@ main {
     bottom: 0;
     color: rgb(255, 255, 255);
     border-radius: 15px;
-    width: 400px;
-    height: 224px;
     opacity: 0;
+    height: 225px;
+}
+.playlist-overlay img {
+    margin-right: 2px;
 }
 .youtube-video-block-playlist:hover .playlist-overlay {
     opacity: 1;
     cursor: pointer;
 }
-.play1 {
-    position: absolute;
-    left: 163px;
-}
-.play2 {
-    position: absolute;
-    left: 180px;
-    font-size: 12px;
-}
 .youtube-playlist {
-    display: block;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 4px;
     left: 0;
@@ -265,12 +244,21 @@ main {
     height: 25px;
     border-radius: 0px 0px 15px 15px;
 }
-.youtube-playlive {
+.youtube-playlist img {
     height: 23px;
     width: 23px;
     position: absolute;
-    bottom: 1px;
-    left: 190px;
     z-index: 17;
+    bottom: 1px;
 }
+/* .youtube-playlive {
+    height: 23px;
+    width: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 17;
+} */
 
