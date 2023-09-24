@@ -1,4 +1,4 @@
-# YouTube Home Page Clone
+# YouTube Clone
 
 
 
@@ -6,7 +6,7 @@ This project is a clone of the YouTube home page, created using HTML and CSS. It
 
 ## Demo
 
-You can view a live demo of the YouTube Home Page Clone here: [Live Demo](link-to-live-demo)
+You can view a live demo of the YouTube Clone here: [Live Demo](https://youtube-clone-git-main-rakeshvhrr.vercel.app/)
 
 ## Features
 
@@ -32,7 +32,7 @@ To view the project locally or make modifications, follow these steps:
 
 ## Usage
 
-You can interact with the YouTube Home Page Clone just like the actual YouTube homepage. Explore its responsive design and layout to see how it adapts to different screen sizes.
+You can interact with the YouTube Clone just like the actual YouTube homepage. Explore its responsive design and layout to see how it adapts to different screen sizes.
 
 ## Contributing 
 
